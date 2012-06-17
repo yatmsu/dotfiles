@@ -21,6 +21,7 @@ set showmatch "対応する括弧のハイライト表示する
 set autoindent
 set number
 set hlsearch " 検索結果をハイライト
+set incsearch " インクリメンタルサーチ
 
 "" タブ
 set expandtab " タブをスペースに置き換える
