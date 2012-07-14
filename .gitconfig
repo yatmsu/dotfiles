@@ -1,8 +1,7 @@
 [user]
-	name = y@su
+  name = y@su
   email = toyasyu@gmail.com
 [color]
-  # colorの設定(以下のコマンドは自動で色つける)
   status = auto
   diff = auto
   branch = auto
@@ -13,4 +12,4 @@
   ci = commit
   st = status
   br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  h = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
