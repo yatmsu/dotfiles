@@ -10,11 +10,10 @@ autoload predict-on
 predict-on
 
 ## Environment
+export LANG="ja_JP.UTF-8"
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-export LANG="ja_JP.UTF-8"
 
 ## history
 HISTFILE=~/.zsh_history
@@ -29,7 +28,16 @@ PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]: "
 
 ## alias
-alias ll="ls -alG"
+case "${OSTYPE}" in
+freebsd*|darwin*)
+  alias ls="ls -G -w"
+  alias ll="ls -alG"
+  ;;
+linux*)
+  alias ls="ls --color"
+  alias ll="ls -al --color"
+  ;;
+esac
 alias h="history 0"
 alias be="bundle exec"
 alias r="bundle exec rails"

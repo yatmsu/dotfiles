@@ -1,6 +1,8 @@
 [user]
   name = y@su
   email = toyasyu@gmail.com
+[core]
+  editor = vim
 [color]
   status = auto
   diff = auto
