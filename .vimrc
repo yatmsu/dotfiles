@@ -11,6 +11,7 @@ Bundle 'git://github.com/vim-ruby/vim-ruby.git'
 "<C-i>でomni補完
 imap <C-i> <C-x><C-o>
 
+set directory=~/.vim/tmp
 
 "" vimの設定
 syntax on

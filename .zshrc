@@ -2,7 +2,7 @@
 autoload -U compinit
 compinit
 setopt auto_cd
-setopt auto_pushd
+setopt auto_pushd # pushd
 setopt correct
 setopt list_packed
 setopt nolistbeep
@@ -30,12 +30,12 @@ SPROMPT="%r is correct? [n,y,a,e]: "
 ## alias
 case "${OSTYPE}" in
 freebsd*|darwin*)
-  alias ls="ls -G -w"
   alias ll="ls -alG"
+  alias ls="ls -G -w"
   ;;
 linux*)
-  alias ls="ls --color"
   alias ll="ls -al --color"
+  alias ls="ls --color"
   ;;
 esac
 alias h="history 0"
