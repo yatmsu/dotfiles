@@ -11,9 +11,6 @@ predict-on
 
 ## Environment
 export LANG="ja_JP.UTF-8"
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 ## history
 HISTFILE=~/.zsh_history
@@ -30,6 +27,9 @@ SPROMPT="%r is correct? [n,y,a,e]: "
 ## alias
 case "${OSTYPE}" in
 freebsd*|darwin*)
+  # rbenv
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
   alias ll="ls -alG"
   alias ls="ls -G -w"
   ;;
