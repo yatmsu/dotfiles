@@ -23,6 +23,10 @@ set autoindent
 set number
 set hlsearch " 検索結果をハイライト
 set incsearch " インクリメンタルサーチ
+set paste
+"" statusline
+set laststatus=2
+set ruler " 行列の表示など
 
 "" タブ
 set expandtab " タブをスペースに置き換える
