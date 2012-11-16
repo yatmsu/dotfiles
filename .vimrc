@@ -24,35 +24,48 @@ filetype plugin indent on " プラグインを有効化
 syntax on
 "colorscheme railscasts
 
-"" view
+" 4 displaying text
 set number " 行数表示
 
-"" search
+" 5 syntax, highlighting and spelling
 set hlsearch " 検索結果をハイライト
 set incsearch " インクリメンタルサーチ
-set history=10000
 
-"" edit
-set showmatch "対応する括弧のハイライト表示する
-set autoindent
-
-"" status line
+"" 6 multiple windows
 set laststatus=2 " 常に表示
 set showcmd " 入力中のコマンドを表示
-set ruler " ルーラー表示
 
-"" tab
-set expandtab " タブをスペースに置き換える
+"" 11 messages and info
+set ruler " 現在のカーソル位置を表示
+set helplang=ja
+
+"" 13 editing text
+set showmatch "対応する括弧のハイライト表示する
+
+"" 14 tabs and indenting
 set tabstop=2 " <TAB>表示時の空白の量
-set softtabstop=2 " <TAB>キー押下時の空白の量
 set shiftwidth=2 " Vimが挿入するインデントの空白の量
+set smarttab
+set softtabstop=2 " <TAB>キー押下時の空白の量
+set expandtab " タブをスペースに置き換える
+set smartindent
 
-"" other
+"" 18 reading and writing files
 set autoread " ファイル変更時にオートロード
+
+"" 19 the swap file
 set directory=~/.vim/tmp " .swpファイルの保存場所
+
+"" 20 command line editing
+set history=10000
+
 
 "" neocomplcache settings
 " 補完ウィンドウの設定
 let g:neocomplcache_enable_at_startup = 1
 " タブキーで補完
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" ------------
+" memo
+" :options
