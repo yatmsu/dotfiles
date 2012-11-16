@@ -22,7 +22,7 @@ filetype plugin indent on " プラグインを有効化
 
 "" colors
 syntax on
-"colorscheme railscasts
+colorscheme desert
 
 " 4 displaying text
 set number " 行数表示
@@ -59,13 +59,25 @@ set directory=~/.vim/tmp " .swpファイルの保存場所
 "" 20 command line editing
 set history=10000
 
-
-"" neocomplcache settings
+"------------------------------------
+" neocomplcache
+"------------------------------------
 " 補完ウィンドウの設定
 let g:neocomplcache_enable_at_startup = 1
 " タブキーで補完
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" ------------
-" memo
-" :options
+"------------------------------------
+" Rsense
+"------------------------------------
+let g:rsenseHome = $RSENSE_HOME
+let g:rsenseUseOmniFunc = 1
+if !exists('g:neocomplcache_omni_functions')
+  let g:neocomplcache_omni_functions = {}
+endif
+let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
