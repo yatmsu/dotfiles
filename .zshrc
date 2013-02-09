@@ -11,7 +11,6 @@ predict-on
 
 ## Environment
 export LANG="ja_JP.UTF-8"
-export RSENSE_HOME="$HOME/.vim/refs/rsense-0.3"
 
 ## history
 HISTFILE=~/.zsh_history
@@ -44,6 +43,7 @@ alias be="bundle exec"
 alias r="bundle exec rails"
 alias mkrsense="ruby $RSENSE_HOME/etc/config.rb > ~/.rsense"
 
-
-
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

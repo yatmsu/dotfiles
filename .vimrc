@@ -10,12 +10,15 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
+" 遅延読み込み
+NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }, }
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'taichouchou2/vim-rsense' " Rubyの補完
+NeoBundle 'Shougo/neocomplcache', { 'autoload' : { 'insert' : 1, }}
+"NeoBundle 'Shougo/neocomplcache-rsense', { 'depends': 'Shougo/neocomplcache', 'autoload': { 'filetypes': 'ruby' }}
+"NeoBundle 'taichouchou2/rsense-0.3', { 'build' : { 'mac': 'ruby etc/config.rb > ~/.rsense', 'unix': 'ruby etc/config.rb > ~/.rsense', } }
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
+NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 
 filetype plugin indent on " プラグインを有効化
 " NeoBundle end
@@ -54,7 +57,7 @@ set smartindent
 set autoread " ファイル変更時にオートロード
 
 "" 19 the swap file
-set directory=~/.vim/tmp " .swpファイルの保存場所
+set directory=~/ " .swpファイルの保存場所
 
 "" 20 command line editing
 set history=10000
@@ -62,22 +65,8 @@ set history=10000
 "------------------------------------
 " neocomplcache
 "------------------------------------
+set infercase
 " 補完ウィンドウの設定
 let g:neocomplcache_enable_at_startup = 1
 " タブキーで補完
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-"------------------------------------
-" Rsense
-"------------------------------------
-let g:rsenseHome = $RSENSE_HOME
-let g:rsenseUseOmniFunc = 1
-if !exists('g:neocomplcache_omni_functions')
-  let g:neocomplcache_omni_functions = {}
-endif
-let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
-" Enable heavy omni completion.
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
