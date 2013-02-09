@@ -11,13 +11,12 @@ if has('vim_starting')
 endif
 
 " 遅延読み込み
-NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }, }
 NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }, }
 NeoBundle 'Shougo/neocomplcache', { 'autoload' : { 'insert' : 1, }}
-"NeoBundle 'Shougo/neocomplcache-rsense', { 'depends': 'Shougo/neocomplcache', 'autoload': { 'filetypes': 'ruby' }}
-"NeoBundle 'taichouchou2/rsense-0.3', { 'build' : { 'mac': 'ruby etc/config.rb > ~/.rsense', 'unix': 'ruby etc/config.rb > ~/.rsense', } }
+NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload' : { 'filetypes': ['ruby', 'eruby', 'haml'] } }
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
+NeoBundle 'tpope/vim-haml'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 
 filetype plugin indent on " プラグインを有効化
@@ -63,10 +62,48 @@ set directory=~/ " .swpファイルの保存場所
 set history=10000
 
 "------------------------------------
+" vim-ruby
+"------------------------------------
+" 演算子をハイライト
+let ruby_operators = 1
+" 行末のホワイトスペースをハイライト
+let ruby_space_errors = 1
+" ft-ruby-omni
+"let g:rubycomplete_buffer_loading = 1
+"let g:rubycomplete_classes_in_global = 1
+"let g:rubycomplete_rails = 1
+
+"------------------------------------
 " neocomplcache
 "------------------------------------
-set infercase
 " 補完ウィンドウの設定
 let g:neocomplcache_enable_at_startup = 1
+" 大文字が入力されるまで大文字小文字の区別を無視する
+let g:neocomplcache_enable_smart_case = 1
+" '_'区切りの補完を有効化
+let g:neocomplcache_enable_underbar_completion = 1
+" シンタックスをキャッシュする時の最小文字長
+let g:neocomplcache_min_syntax_length = 3
+"" 辞書の定義
+"let g:neocomplcache_dictionary_filetype_lists = { 'default' : '' }
+"if !exists('g:neocomplcache_keyword_patterns')
+"  let g:neocomplcache_keyword_patterns = {}
+"endif
+"let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+"
+"if !exists('g:neocomplcache_omni_patterns')
+"  let g:neocomplcache_omni_patterns = {}
+"endif
+"let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
+
+" AutoComplPop like behavior. 非推奨
+"let g:neocomplcache_enable_auto_select = 1
+
+"------------------------------------
+" Key Mappings
+"------------------------------------
+imap <C-o> <C-x><C-o>
 " タブキーで補完
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h> <BS>時に確実にポップアップを削除する。
+"inoremap <expr><C-h> neocomplcache#smart_close_popup().”\<C-h>”
