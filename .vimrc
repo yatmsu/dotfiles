@@ -10,21 +10,29 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
+" Color Scheme
+"NeoBundle 'ujihisa/unite-colorscheme' " :Unite colorscheme
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'https://github.com/yatmsu/molokai.git'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'vim-scripts/newspaper.vim'
 " 遅延読み込み
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }, }
 NeoBundle 'Shougo/neocomplcache', { 'autoload' : { 'insert' : 1, }}
-NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload' : { 'filetypes': ['ruby', 'eruby', 'haml'] } }
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
-NeoBundle 'git://github.com/scrooloose/nerdtree.git'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload' : { 'filetypes': ['ruby', 'eruby', 'haml'] } }
 
 filetype plugin indent on " プラグインを有効化
 " NeoBundle end
 
 "" colors
 syntax on
-colorscheme desert
+"colorscheme desert
+colorscheme molokai
 
 " 4 displaying text
 set number " 行数表示
@@ -76,14 +84,10 @@ let ruby_space_errors = 1
 "------------------------------------
 " neocomplcache
 "------------------------------------
-" 補完ウィンドウの設定
-let g:neocomplcache_enable_at_startup = 1
-" 大文字が入力されるまで大文字小文字の区別を無視する
-let g:neocomplcache_enable_smart_case = 1
-" '_'区切りの補完を有効化
-let g:neocomplcache_enable_underbar_completion = 1
-" シンタックスをキャッシュする時の最小文字長
-let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_enable_at_startup = 1 " 補完ウィンドウの設定
+let g:neocomplcache_enable_smart_case = 1 " 大文字が入力されるまで大文字小文字の区別を無視する
+let g:neocomplcache_enable_underbar_completion = 1 " '_'区切りの補完を有効化
+
 "" 辞書の定義
 "let g:neocomplcache_dictionary_filetype_lists = { 'default' : '' }
 "if !exists('g:neocomplcache_keyword_patterns')
