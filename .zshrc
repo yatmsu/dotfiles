@@ -24,6 +24,8 @@ PROMPT="%/%% "
 PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]: "
 
+EDITER=vim
+
 ## alias
 case "${OSTYPE}" in
 freebsd*|darwin*)
@@ -41,6 +43,7 @@ esac
 alias h="history 0"
 alias be="bundle exec"
 alias r="bundle exec rails"
+alias git="git stash list; git"
 alias mkrsense="ruby $RSENSE_HOME/etc/config.rb > ~/.rsense"
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
