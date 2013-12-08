@@ -10,7 +10,7 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
-" Color Scheme
+"" Color Scheme
 "NeoBundle 'ujihisa/unite-colorscheme' " :Unite colorscheme
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'https://github.com/yatmsu/molokai.git'
@@ -20,7 +20,7 @@ NeoBundle 'vim-scripts/newspaper.vim'
 " 遅延読み込み
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }, }
-NeoBundle 'Shougo/neocomplcache', { 'autoload' : { 'insert' : 1, }}
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'scrooloose/nerdtree'
@@ -84,24 +84,9 @@ let ruby_space_errors = 1
 "------------------------------------
 " neocomplcache
 "------------------------------------
-let g:neocomplcache_enable_at_startup = 1 " 補完ウィンドウの設定
-let g:neocomplcache_enable_smart_case = 1 " 大文字が入力されるまで大文字小文字の区別を無視する
-let g:neocomplcache_enable_underbar_completion = 1 " '_'区切りの補完を有効化
-
-"" 辞書の定義
-"let g:neocomplcache_dictionary_filetype_lists = { 'default' : '' }
-"if !exists('g:neocomplcache_keyword_patterns')
-"  let g:neocomplcache_keyword_patterns = {}
-"endif
-"let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-"
-"if !exists('g:neocomplcache_omni_patterns')
-"  let g:neocomplcache_omni_patterns = {}
-"endif
-"let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
-
-" AutoComplPop like behavior. 非推奨
-"let g:neocomplcache_enable_auto_select = 1
+let g:neocomplete_enable_at_startup = 1 " 補完ウィンドウの設定
+let g:neocomplete_enable_smart_case = 1 " 大文字が入力されるまで大文字小文字の区別を無視する
+let g:neocomplete_enable_underbar_completion = 1 " '_'区切りの補完を有効化
 
 "------------------------------------
 " Key Mappings
