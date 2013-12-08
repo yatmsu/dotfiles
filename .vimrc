@@ -19,7 +19,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/newspaper.vim'
 " 遅延読み込み
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }, }
+"NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }, }
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
@@ -82,11 +82,13 @@ let ruby_space_errors = 1
 "let g:rubycomplete_rails = 1
 
 "------------------------------------
-" neocomplcache
+" neocomplete.vim
 "------------------------------------
-let g:neocomplete_enable_at_startup = 1 " 補完ウィンドウの設定
-let g:neocomplete_enable_smart_case = 1 " 大文字が入力されるまで大文字小文字の区別を無視する
-let g:neocomplete_enable_underbar_completion = 1 " '_'区切りの補完を有効化
+let g:neocomplete#enable_at_startup = 1 " 補完ウィンドウの設定
+let g:neocomplete#enable_smart_case = 1 " 大文字が入力されるまで大文字小文字の区別を無視する
+let g:neocomplete#enable_underbar_completion = 1 " '_'区切りの補完を有効化
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#force_overwrite_completefunc = 1 " vim-railsの対応まち
 
 "------------------------------------
 " Key Mappings
@@ -94,5 +96,3 @@ let g:neocomplete_enable_underbar_completion = 1 " '_'区切りの補完を有�
 imap <C-o> <C-x><C-o>
 " タブキーで補完
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h> <BS>時に確実にポップアップを削除する。
-"inoremap <expr><C-h> neocomplcache#smart_close_popup().”\<C-h>”
