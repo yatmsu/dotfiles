@@ -24,13 +24,13 @@ PROMPT="%/%% "
 PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]: "
 
-EDITER=vim
+EDITOER=vim
 
 ## alias
 case "${OSTYPE}" in
 freebsd*|darwin*)
   # rbenv
-  export PATH="$HOME/.rbenv/bin:$PATH"
+  export PATH="/usr/local/bin:$PATH"
   eval "$(rbenv init -)"
   alias ll="ls -alG"
   alias ls="ls -G -w"
@@ -43,7 +43,6 @@ esac
 alias h="history 0"
 alias be="bundle exec"
 alias r="bundle exec rails"
-alias git="git stash list; git"
 alias mkrsense="ruby $RSENSE_HOME/etc/config.rb > ~/.rsense"
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
