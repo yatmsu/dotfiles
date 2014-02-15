@@ -1,25 +1,18 @@
-" NeoBundle start
+" NeoBundle
 " $ mkdir -p ~/.vim/bundle
 " $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-set nocompatible " viとの互換モードをOFFに
-filetype off
-filetype plugin indent off
-
 if has('vim_starting')
+  set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
-"" Color Scheme
-"NeoBundle 'ujihisa/unite-colorscheme' " :Unite colorscheme
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'https://github.com/yatmsu/molokai.git'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'vim-scripts/newspaper.vim'
-" 遅延読み込み
-NeoBundle 'Shougo/neobundle.vim'
-"NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak', }, }
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
@@ -27,12 +20,20 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'itchyny/lightline.vim'
 
-filetype plugin indent on " プラグインを有効化
-" NeoBundle end
+" Color Schemes
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'https://github.com/yatmsu/molokai.git'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'vim-scripts/newspaper.vim'
 
-"" colors
+filetype plugin indent on " プラグインを有効化
+
+" Installation check
+NeoBundleCheck
+
+" colors
 syntax on
-"colorscheme desert
 colorscheme molokai
 
 " 4 displaying text
