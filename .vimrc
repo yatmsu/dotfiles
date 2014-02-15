@@ -1,7 +1,7 @@
 " NeoBundle start
 " $ mkdir -p ~/.vim/bundle
 " $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-set nocompatible
+set nocompatible " viとの互換モードをOFFに
 filetype off
 filetype plugin indent off
 
@@ -24,7 +24,8 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload' : { 'filetypes': ['ruby', 'eruby', 'haml'] } }
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'itchyny/lightline.vim'
 
 filetype plugin indent on " プラグインを有効化
 " NeoBundle end
@@ -68,6 +69,13 @@ set directory=~/ " .swpファイルの保存場所
 
 "" 20 command line editing
 set history=10000
+
+"------------------------------------
+" lightline
+"------------------------------------
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
 
 "------------------------------------
 " vim-ruby
