@@ -27,13 +27,15 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/newspaper.vim'
 
-filetype plugin indent on " プラグインを有効化
-
 " Installation check
 NeoBundleCheck
 
 " colors
 syntax on
+filetype on
+filetype plugin on
+filetype indent on
+
 colorscheme molokai
 
 " 4 displaying text
@@ -81,10 +83,8 @@ let g:lightline = {
 "------------------------------------
 " vim-ruby
 "------------------------------------
-" 演算子をハイライト
-let ruby_operators = 1
-" 行末のホワイトスペースをハイライト
-let ruby_space_errors = 1
+let ruby_operators = 1 " 演算子をハイライト
+let ruby_space_errors = 1 " 行末のホワイトスペースをハイライト
 " ft-ruby-omni
 "let g:rubycomplete_buffer_loading = 1
 "let g:rubycomplete_classes_in_global = 1
