@@ -19,6 +19,7 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'tpope/vim-fugitive'
 
 " Color Schemes
 NeoBundle 'w0ng/vim-hybrid'
@@ -78,7 +79,21 @@ set history=10000
 "------------------------------------
 let g:lightline = {
       \ 'colorscheme': 'solarized',
+      \ 'active': {
+      \   'left': [ ['mode', 'paste'], ['fugitive', 'readonly', 'filename', 'modified'] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'MyFugitive',
       \ }
+      \ }
+
+function! MyFugitive()
+  if exists('*fugitive#head')
+    return fugitive#head()
+    " return ' ' . fugitive#head()
+  endif
+  return ''
+endfunction
 
 "------------------------------------
 " vim-ruby
