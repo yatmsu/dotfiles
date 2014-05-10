@@ -6,8 +6,6 @@ setopt auto_pushd # pushd
 setopt correct
 setopt list_packed
 setopt nolistbeep
-autoload predict-on
-predict-on
 
 ## Environment
 export LANG="ja_JP.UTF-8"
