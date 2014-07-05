@@ -52,3 +52,5 @@ alias mkrsense="ruby $RSENSE_HOME/etc/config.rb > ~/.rsense"
 
 ## Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+## rsruby environment
+export R_HOME="/usr/local/Cellar/r/3.1.0/R.framework/Resources"
