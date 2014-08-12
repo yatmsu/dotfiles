@@ -46,7 +46,6 @@ esac
 alias h="history 0"
 alias be="bundle exec"
 alias r="bundle exec rails"
-alias mkrsense="ruby $RSENSE_HOME/etc/config.rb > ~/.rsense"
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
