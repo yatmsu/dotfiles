@@ -78,6 +78,7 @@ set history=10000
 " NERDTree
 "------------------------------------
 autocmd vimenter * NERDTree
+let g:NERDTreeShowHidden=1 " 隠しファイルを表示する
 
 "------------------------------------
 " lightline
