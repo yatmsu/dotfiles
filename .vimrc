@@ -14,12 +14,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-haml'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-haml'
 
 " Color Schemes
 NeoBundle 'w0ng/vim-hybrid'
