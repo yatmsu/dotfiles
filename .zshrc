@@ -7,6 +7,9 @@ setopt correct
 setopt list_packed
 setopt nolistbeep
 
+# key bind
+bindkey -e
+
 ## Environment
 export LANG="ja_JP.UTF-8"
 
