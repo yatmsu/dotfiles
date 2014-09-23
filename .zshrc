@@ -28,7 +28,8 @@ PROMPT="%/%% "
 PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]: "
 
-export EDITOR=vim
+## editor
+export BUNDLER_EDITOR=vim
 
 ## alias
 case "${OSTYPE}" in
