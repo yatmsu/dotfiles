@@ -98,7 +98,7 @@ let g:lightline = {
 
 function! MyFugitive()
   if exists('*fugitive#head')
-    return ' ' . fugitive#head()
+    return '* ' . fugitive#head()
   endif
   return ''
 endfunction
