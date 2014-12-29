@@ -41,6 +41,8 @@ filetype indent on
 
 colorscheme molokai
 
+set display=lastline
+
 " 4 displaying text
 set number " 行数表示
 
