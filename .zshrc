@@ -37,8 +37,6 @@ freebsd*|darwin*)
   # rbenv
   export PATH="/usr/local/bin:$PATH"
   eval "$(rbenv init - zsh)"
-  # Rails
-  export SECRET_KEY_BASE="a38d6313981985b5d084455c8376673c0b110909458ec1422dbc9c5cdf8dc51925c36ab2b0c58255b05d679781b65f5096ec46024ff262ed78da953b5a069087"
   alias ll="ls -alG"
   alias ls="ls -G -w"
   ;;
