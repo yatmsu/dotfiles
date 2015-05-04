@@ -21,6 +21,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'Yggdroot/indentLine'
 
 " Color Schemes
 NeoBundle 'w0ng/vim-hybrid'
@@ -121,6 +122,13 @@ let g:neocomplete#enable_at_startup = 1 " 起動時にneocompleteを実行
 let g:neocomplete#enable_smart_case = 1 " 大文字が入力されるまで大文字小文字の区別を無視する
 let g:neocomplete#enable_underbar_completion = 1 " '_'区切りの補完を有効化
 let g:neocomplete#sources#syntax#min_keyword_length = 3 " シンタックスファイルの補完候補となるキーワードの長さ
+
+"------------------------------------
+" vim-indent-guides
+"------------------------------------
+let g:indentLine_char = '︙'
+let g:indentLine_color_term = 239
+let g:indentLine_fileTypeExclude = ['help', 'nerdtree']
 
 "------------------------------------
 " Key Mappings
