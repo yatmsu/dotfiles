@@ -11,7 +11,6 @@ endif
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 " My Bundles here:
 NeoBundle 'Shougo/neocomplete.vim'
@@ -29,6 +28,8 @@ NeoBundle 'https://github.com/yatmsu/molokai.git'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/newspaper.vim'
+
+call neobundle#end()
 
 " Installation check
 NeoBundleCheck
