@@ -10,17 +10,18 @@ endif
 " Let NeoBundle manage NeoBundle
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
 
-" My Bundles here:
+NeoBundleFetch 'Shougo/neobundle.vim'
+" Bundles
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'Yggdroot/indentLine'
 
 " Color Schemes
