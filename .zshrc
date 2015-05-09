@@ -47,6 +47,7 @@ linux*)
 esac
 alias h="history 0"
 alias be="bundle exec"
+alias bi="bundle install"
 alias r="bin/rails"
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
