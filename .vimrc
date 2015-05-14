@@ -21,6 +21,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'slim-template/vim-slim'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'Yggdroot/indentLine'
 
