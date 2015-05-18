@@ -12,6 +12,13 @@ bindkey -e
 
 ## Environment
 export LANG="ja_JP.UTF-8"
+# bundler editor
+export BUNDLER_EDITOR=vim
+# rbenv init
+export PATH="/usr/local/bin:$PATH"
+eval "$(rbenv init - zsh)"
+# Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
 ## history
 HISTFILE=~/.zsh_history
@@ -28,15 +35,9 @@ PROMPT="%/%% "
 PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]: "
 
-## editor
-export BUNDLER_EDITOR=vim
-
 ## alias
 case "${OSTYPE}" in
 freebsd*|darwin*)
-  # rbenv
-  export PATH="/usr/local/bin:$PATH"
-  eval "$(rbenv init - zsh)"
   alias ll="ls -alG"
   alias ls="ls -G -w"
   ;;
@@ -51,6 +52,3 @@ alias bi="bundle install"
 alias r="bin/rails"
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
-
-## Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
