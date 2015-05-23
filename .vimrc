@@ -128,7 +128,6 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3 " シンタックスフ�
 "------------------------------------
 " vim-indent-guides
 "------------------------------------
-let g:indentLine_char = '︙'
 let g:indentLine_color_term = 239
 let g:indentLine_fileTypeExclude = ['help', 'nerdtree']
 
