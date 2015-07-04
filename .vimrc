@@ -24,6 +24,7 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'chase/vim-ansible-yaml'
 
 " Color Schemes
 NeoBundle 'w0ng/vim-hybrid'
