@@ -25,6 +25,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'elzr/vim-json'
 
 " Color Schemes
 NeoBundle 'w0ng/vim-hybrid'
@@ -131,6 +132,11 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3 " シンタックスフ�
 "------------------------------------
 let g:indentLine_color_term = 239
 let g:indentLine_fileTypeExclude = ['help', 'nerdtree']
+
+"------------------------------------
+" vim-json
+"------------------------------------
+let g:vim_json_syntax_conceal = 0
 
 "------------------------------------
 " Key Mappings
