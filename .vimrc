@@ -84,6 +84,9 @@ set directory=~/ " .swpファイルの保存場所
 "" 20 command line editing
 set history=10000
 
+" Auto Command
+au BufNewFile,BufRead *.jbuilder :set filetype=ruby
+
 "------------------------------------
 " NERDTree
 "------------------------------------
