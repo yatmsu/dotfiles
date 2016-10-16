@@ -1,50 +1,55 @@
-" NeoBundle
-" $ mkdir -p ~/.vim/bundle
-" $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+" dein.vim install
+" $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+" $ sh ./installer.sh ~/.vim/dein
+" dein Scripts-----------------------------
+if &compatible
+  set nocompatible " Be iMproved
 endif
 
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+call dein#begin('~/.vim/dein')
+" Let dein manage dein
+call dein#add('Shougo/dein.vim')
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-" Bundles
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'thoughtbot/vim-rspec'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'chase/vim-ansible-yaml'
-NeoBundle 'elzr/vim-json'
+" Add or remove your plugins here:
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/unite.vim')
+call dein#add('scrooloose/nerdtree')
+call dein#add('itchyny/lightline.vim')
+call dein#add('tpope/vim-fugitive')
+call dein#add('vim-ruby/vim-ruby')
+call dein#add('tpope/vim-endwise')
+call dein#add('tpope/vim-rails')
+call dein#add('tpope/vim-haml')
+call dein#add('slim-template/vim-slim')
+call dein#add('thoughtbot/vim-rspec')
+call dein#add('Yggdroot/indentLine')
+call dein#add('chase/vim-ansible-yaml')
+call dein#add('elzr/vim-json')
 
-" Color Schemes
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'https://github.com/yatmsu/molokai.git'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'vim-scripts/newspaper.vim'
+call dein#add('w0ng/vim-hybrid')
+call dein#add('https://github.com/yatmsu/molokai.git')
+call dein#add('nanotech/jellybeans.vim')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('vim-scripts/newspaper.vim')
 
-call neobundle#end()
+" You can specify revision/branch/tag.
+call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
-" Installation check
-NeoBundleCheck
+call dein#end()
+
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
 
 " colors
 syntax on
 filetype on
-filetype plugin on
-filetype indent on
 
 colorscheme molokai
 
