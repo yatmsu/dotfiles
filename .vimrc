@@ -28,6 +28,7 @@ call dein#add('Yggdroot/indentLine')
 call dein#add('chase/vim-ansible-yaml')
 call dein#add('elzr/vim-json')
 call dein#add('pangloss/vim-javascript')
+call dein#add('mxw/vim-jsx')
 
 call dein#add('w0ng/vim-hybrid')
 call dein#add('https://github.com/yatmsu/molokai.git')
