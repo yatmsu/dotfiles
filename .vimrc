@@ -29,6 +29,7 @@ call dein#add('chase/vim-ansible-yaml')
 call dein#add('elzr/vim-json')
 call dein#add('pangloss/vim-javascript')
 call dein#add('mxw/vim-jsx')
+call dein#add('scrooloose/syntastic')
 
 call dein#add('w0ng/vim-hybrid')
 call dein#add('https://github.com/yatmsu/molokai.git')
@@ -42,7 +43,6 @@ call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 call dein#end()
 
 filetype plugin indent on
-syntax enable
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
@@ -50,7 +50,6 @@ if dein#check_install()
 endif
 
 " colors
-syntax on
 filetype on
 
 colorscheme molokai
@@ -129,6 +128,14 @@ endfunction
 let ruby_operators = 1 " 演算子をハイライト
 let ruby_space_errors = 1 " 行末のホワイトスペースをハイライト
 let g:ruby_indent_access_modifier_style = 'indent'
+
+"------------------------------------
+"
+"------------------------------------
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+syntax enable
+syntax on
 
 "------------------------------------
 " neocomplete.vim
