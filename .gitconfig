@@ -12,6 +12,7 @@
   st = status
   br = branch
   h = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  pfwl = push --force-with-lease
 [merge]
   ff = false
 [pull]
