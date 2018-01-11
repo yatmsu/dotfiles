@@ -110,9 +110,7 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
-      \ },
-      \ 'separator': {'left': '⮀', 'right': '⮂'},
-      \ 'subseparator': {'left': '⮁', 'right': '⮃'}
+      \ }
       \ }
 
 function! MyFugitive()
