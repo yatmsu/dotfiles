@@ -30,6 +30,7 @@ call dein#add('elzr/vim-json')
 call dein#add('pangloss/vim-javascript')
 call dein#add('mxw/vim-jsx')
 call dein#add('scrooloose/syntastic')
+call dein#add('zerowidth/vim-copy-as-rtf')
 
 call dein#add('w0ng/vim-hybrid')
 call dein#add('https://github.com/yatmsu/molokai.git')
