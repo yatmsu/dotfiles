@@ -14,8 +14,6 @@
   h = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   g = grep
   pfwl = push --force-with-lease
-[merge]
-  ff = false
 [pull]
   rebase = true
 [ghq]
