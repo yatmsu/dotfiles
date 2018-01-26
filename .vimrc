@@ -50,6 +50,8 @@ if dein#check_install()
   call dein#install()
 endif
 
+syntax enable
+
 " colors
 filetype on
 
@@ -92,6 +94,7 @@ set directory=~/ " .swpファイルの保存場所
 "" 20 command line editing
 set history=10000
 
+
 " Auto Command
 au BufNewFile,BufRead *.jbuilder :set filetype=ruby
 
@@ -133,8 +136,6 @@ let g:ruby_indent_access_modifier_style = 'indent'
 "------------------------------------
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop']
-syntax enable
-syntax on
 
 "------------------------------------
 " neocomplete.vim
