@@ -1,1 +1,1 @@
--T --skip-turbolinks --skip-active-storage
+-T --skip-turbolinks --skip-active-storage --skip-coffee
