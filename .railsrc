@@ -1,1 +1,1 @@
--T --skip-turbolinks --skip-active-storage --skip-coffee --skip-spring
+-d mysql -T --skip-turbolinks --skip-active-storage --skip-coffee --skip-spring
