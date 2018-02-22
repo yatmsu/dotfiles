@@ -16,5 +16,7 @@
   pfwl = push --force-with-lease
 [pull]
   rebase = true
+[fetch]
+  prune = true
 [ghq]
   root = ~/.ghq
