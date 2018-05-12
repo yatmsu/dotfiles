@@ -22,6 +22,8 @@ call dein#add('vim-ruby/vim-ruby')
 call dein#add('tpope/vim-endwise')
 call dein#add('tpope/vim-rails')
 call dein#add('tpope/vim-haml')
+call dein#add('elixir-editors/vim-elixir')
+
 call dein#add('slim-template/vim-slim')
 call dein#add('thoughtbot/vim-rspec')
 call dein#add('Yggdroot/indentLine')
