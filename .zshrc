@@ -53,7 +53,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zshrc.mine
+if [ -e $HOME/.zshrc.mine ]; then
+  source $HOME/.zshrc.mine
+fi
 
 # You may need to manually set your language environment
 export LANG=ja_JP.UTF-8
