@@ -8,53 +8,56 @@ endif
 
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-call dein#begin('~/.vim/dein')
-" Let dein manage dein
-call dein#add('Shougo/dein.vim')
+if dein#load_state('/Users/yatmsu/.vim/dein')
+  call dein#begin('~/.vim/dein')
 
-" Add or remove your plugins here:
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/unite.vim')
-call dein#add('scrooloose/nerdtree')
-call dein#add('itchyny/lightline.vim')
-call dein#add('tpope/vim-fugitive')
-call dein#add('vim-ruby/vim-ruby')
-call dein#add('tpope/vim-endwise')
-call dein#add('tpope/vim-rails')
-call dein#add('tpope/vim-haml')
-call dein#add('elixir-editors/vim-elixir')
+  " Let dein manage dein
+  call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 
-call dein#add('slim-template/vim-slim')
-call dein#add('thoughtbot/vim-rspec')
-call dein#add('Yggdroot/indentLine')
-call dein#add('chase/vim-ansible-yaml')
-call dein#add('kchmck/vim-coffee-script')
-call dein#add('elzr/vim-json')
-call dein#add('pangloss/vim-javascript')
-call dein#add('mxw/vim-jsx')
-call dein#add('scrooloose/syntastic')
-call dein#add('zerowidth/vim-copy-as-rtf')
-call dein#add('lambdalisue/vim-gista')
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('vim-ruby/vim-ruby')
+  call dein#add('tpope/vim-endwise')
+  call dein#add('tpope/vim-rails')
+  call dein#add('tpope/vim-haml')
+  call dein#add('elixir-editors/vim-elixir')
 
-call dein#add('w0ng/vim-hybrid')
-call dein#add('https://github.com/yatmsu/molokai.git')
-call dein#add('nanotech/jellybeans.vim')
-call dein#add('altercation/vim-colors-solarized')
-call dein#add('vim-scripts/newspaper.vim')
+  call dein#add('slim-template/vim-slim')
+  call dein#add('thoughtbot/vim-rspec')
+  call dein#add('Yggdroot/indentLine')
+  call dein#add('chase/vim-ansible-yaml')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('elzr/vim-json')
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('mxw/vim-jsx')
+  call dein#add('scrooloose/syntastic')
+  call dein#add('zerowidth/vim-copy-as-rtf')
+  call dein#add('lambdalisue/vim-gista')
 
-" You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+  call dein#add('w0ng/vim-hybrid')
+  call dein#add('https://github.com/yatmsu/molokai.git')
+  call dein#add('nanotech/jellybeans.vim')
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('vim-scripts/newspaper.vim')
 
-call dein#end()
+  " You can specify revision/branch/tag.
+  " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+  call dein#end()
+  call dein#save_state()
+endif
 
 filetype plugin indent on
+syntax enable
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
   call dein#install()
 endif
-
-syntax enable
 
 " colors
 filetype on
