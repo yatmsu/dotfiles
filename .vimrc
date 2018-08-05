@@ -8,7 +8,7 @@ endif
 
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('/Users/yatmsu/.vim/dein')
+if dein#load_state('~/.vim/dein')
   call dein#begin('~/.vim/dein')
 
   " Let dein manage dein
