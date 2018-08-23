@@ -104,6 +104,7 @@ set history=10000
 
 " Auto Command
 au BufNewFile,BufRead *.jbuilder :set filetype=ruby
+au BufNewFile,BufRead *.thor :set filetype=ruby
 au BufNewFile,BufRead *.dig* :set filetype=yaml
 
 "------------------------------------
