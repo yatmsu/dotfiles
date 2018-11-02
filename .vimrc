@@ -25,6 +25,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('tpope/vim-rails')
   call dein#add('tpope/vim-haml')
   call dein#add('elixir-editors/vim-elixir')
+  call dein#add('hashivim/vim-terraform')
 
   call dein#add('slim-template/vim-slim')
   call dein#add('thoughtbot/vim-rspec')
@@ -150,6 +151,14 @@ let g:syntastic_ruby_checkers = ['rubocop']
 " vim-gista
 "------------------------------------
 let g:gista#client#default_username = 'yatmsu'
+
+"------------------------------------
+" vim-terraform
+"------------------------------------
+let g:terraform_align=0
+let g:terraform_fold_sections=0
+let g:terraform_remap_spacebar=0
+let g:terraform_commentstring='#%s'
 
 "------------------------------------
 " neocomplete.vim
