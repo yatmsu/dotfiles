@@ -40,7 +40,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('lambdalisue/vim-gista')
 
   call dein#add('w0ng/vim-hybrid')
-  call dein#add('https://github.com/yatmsu/molokai.git')
+  call dein#add('tomasr/molokai')
   call dein#add('nanotech/jellybeans.vim')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('vim-scripts/newspaper.vim')
@@ -133,6 +133,11 @@ function! MyFugitive()
   endif
   return ''
 endfunction
+
+"------------------------------------
+" molokai
+"------------------------------------
+hi Comment         ctermfg=darkgreen
 
 "------------------------------------
 " vim-ruby
