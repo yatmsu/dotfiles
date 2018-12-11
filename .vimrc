@@ -35,7 +35,6 @@ if dein#load_state('~/.vim/dein')
   call dein#add('elzr/vim-json')
   call dein#add('pangloss/vim-javascript')
   call dein#add('mxw/vim-jsx')
-  call dein#add('scrooloose/syntastic')
   call dein#add('zerowidth/vim-copy-as-rtf')
   call dein#add('lambdalisue/vim-gista')
 
@@ -145,12 +144,6 @@ hi Comment         ctermfg=darkgreen
 let ruby_operators = 1 " 演算子をハイライト
 let ruby_space_errors = 1 " 行末のホワイトスペースをハイライト
 let g:ruby_indent_access_modifier_style = 'indent'
-
-"------------------------------------
-"
-"------------------------------------
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
-let g:syntastic_ruby_checkers = ['rubocop']
 
 "------------------------------------
 " vim-gista
