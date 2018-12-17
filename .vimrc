@@ -62,7 +62,7 @@ endif
 " colors
 filetype on
 
-colorscheme molokai
+colorscheme jellybeans
 
 set display=lastline
 
@@ -132,11 +132,6 @@ function! MyFugitive()
   endif
   return ''
 endfunction
-
-"------------------------------------
-" molokai
-"------------------------------------
-hi Comment         ctermfg=darkgreen
 
 "------------------------------------
 " vim-ruby
