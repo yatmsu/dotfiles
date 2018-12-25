@@ -118,7 +118,7 @@ let g:NERDTreeShowHidden=1 " 隠しファイルを表示する
 " lightline
 "------------------------------------
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'jellybeans',
       \ 'active': {
       \   'left': [ ['mode', 'paste'], ['fugitive', 'readonly', 'filename', 'modified'] ]
       \ },
