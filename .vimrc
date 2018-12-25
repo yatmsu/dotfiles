@@ -43,6 +43,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('nanotech/jellybeans.vim')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('vim-scripts/newspaper.vim')
+  call dein#add('jpo/vim-railscasts-theme')
 
   " You can specify revision/branch/tag.
   " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
