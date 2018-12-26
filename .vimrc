@@ -112,6 +112,7 @@ au BufNewFile,BufRead *.dig* :set filetype=yaml
 " NERDTree
 "------------------------------------
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " ファイル指定無しでvim起動時のみ実行
+hi CursorLine cterm=NONE ctermfg=238 ctermbg=3
 let g:NERDTreeShowHidden=1 " 隠しファイルを表示する
 
 "------------------------------------
