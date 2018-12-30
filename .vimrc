@@ -25,6 +25,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('tpope/vim-rails')
   call dein#add('tpope/vim-haml')
   call dein#add('elixir-editors/vim-elixir')
+  call dein#add('fatih/vim-go')
   call dein#add('hashivim/vim-terraform')
 
   call dein#add('slim-template/vim-slim')
