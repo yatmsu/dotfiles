@@ -15,7 +15,6 @@ if dein#load_state('~/.vim/dein')
   call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
-  call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('scrooloose/nerdtree')
   call dein#add('itchyny/lightline.vim')
@@ -157,14 +156,6 @@ let g:terraform_remap_spacebar=0
 let g:terraform_commentstring='#%s'
 
 "------------------------------------
-" neocomplete.vim
-"------------------------------------
-let g:neocomplete#enable_at_startup = 1 " 起動時にneocompleteを実行
-let g:neocomplete#enable_smart_case = 1 " 大文字が入力されるまで大文字小文字の区別を無視する
-let g:neocomplete#enable_underbar_completion = 1 " '_'区切りの補完を有効化
-let g:neocomplete#sources#syntax#min_keyword_length = 3 " シンタックスファイルの補完候補となるキーワードの長さ
-
-"------------------------------------
 " vim-indent-guides
 "------------------------------------
 let g:indentLine_color_term = 239
@@ -174,9 +165,3 @@ let g:indentLine_fileTypeExclude = ['help', 'nerdtree']
 " vim-json
 "------------------------------------
 let g:vim_json_syntax_conceal = 0
-
-"------------------------------------
-" Key Mappings
-"------------------------------------
-" タブキーで補完
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
