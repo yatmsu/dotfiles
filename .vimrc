@@ -37,6 +37,11 @@ if dein#load_state('~/.vim/dein')
   call dein#add('mxw/vim-jsx')
   call dein#add('zerowidth/vim-copy-as-rtf')
   call dein#add('lambdalisue/vim-gista')
+  call dein#add('Shougo/deoplete.nvim') " pip3 install --upgrade neovim
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
 
   call dein#add('w0ng/vim-hybrid')
   call dein#add('tomasr/molokai')
@@ -102,11 +107,17 @@ set directory=~/ " .swpファイルの保存場所
 "" 20 command line editing
 set history=10000
 
-
 " Auto Command
 au BufNewFile,BufRead *.jbuilder :set filetype=ruby
 au BufNewFile,BufRead *.thor :set filetype=ruby
 au BufNewFile,BufRead *.dig* :set filetype=yaml
+
+"------------------------------------
+" deoplete
+"------------------------------------
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_start_length = 0
+let g:deoplete#auto_complete_delay = 10
 
 "------------------------------------
 " NERDTree
