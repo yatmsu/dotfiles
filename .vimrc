@@ -37,6 +37,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('mxw/vim-jsx')
   call dein#add('zerowidth/vim-copy-as-rtf')
   call dein#add('lambdalisue/vim-gista')
+  call dein#add('editorconfig/editorconfig-vim')
   call dein#add('Shougo/deoplete.nvim') " pip3 install --upgrade neovim
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
