@@ -11,6 +11,7 @@
   ci = commit
   st = status
   br = branch --sort=-committerdate --format='%(committerdate:short) %(if)%(HEAD)%(then)*%(color:green) %(else)  %(end)%(refname)'
+  br-renamed-to = branch -m
   h = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   g = grep
   pfwl = push --force-with-lease
