@@ -108,6 +108,10 @@ set directory=~/ " .swpファイルの保存場所
 "" 20 command line editing
 set history=10000
 
+"" 空白文字可視化
+set list
+set listchars=tab:>-,trail:~,extends:>,precedes:<,eol:↲
+
 " Auto Command
 au BufNewFile,BufRead *.jbuilder :set filetype=ruby
 au BufNewFile,BufRead *.thor :set filetype=ruby
