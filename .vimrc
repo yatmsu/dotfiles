@@ -114,6 +114,7 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,eol:↲
 
 " Auto Command
 au BufNewFile,BufRead *.jbuilder :set filetype=ruby
+au BufNewFile,BufRead *.jb :set filetype=ruby
 au BufNewFile,BufRead *.thor :set filetype=ruby
 au BufNewFile,BufRead *.dig* :set filetype=yaml
 
