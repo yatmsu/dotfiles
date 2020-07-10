@@ -15,6 +15,7 @@
   h = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   g = grep
   pfwl = push --force-with-lease
+  brm = branch -m
 [pull]
   rebase = true
 [fetch]
