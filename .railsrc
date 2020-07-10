@@ -1,1 +1,1 @@
--d mysql -T --skip-turbolinks --skip-coffee --webpack
+-d mysql -T --skip-turbolinks --skip-coffee
