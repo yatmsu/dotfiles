@@ -8,6 +8,7 @@
   ui = auto
 [alias]
   co = checkout
+  sw = switch
   ci = commit
   st = status
   br = branch --sort=-committerdate --format='%(committerdate:short) %(if)%(HEAD)%(then)*%(color:green) %(else)  %(end)%(refname)'
