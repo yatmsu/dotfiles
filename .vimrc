@@ -15,7 +15,6 @@ if dein#load_state('~/.vim/dein')
   call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
-  call dein#add('Shougo/unite.vim')
   call dein#add('scrooloose/nerdtree')
   call dein#add('itchyny/lightline.vim')
   call dein#add('tpope/vim-fugitive')
