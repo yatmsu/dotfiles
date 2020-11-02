@@ -38,11 +38,6 @@ if dein#load_state('~/.vim/dein')
   call dein#add('zerowidth/vim-copy-as-rtf')
   call dein#add('lambdalisue/vim-gista')
   call dein#add('editorconfig/editorconfig-vim')
-  call dein#add('Shougo/deoplete.nvim') " pip3 install --upgrade neovim
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
 
   call dein#add('w0ng/vim-hybrid')
   call dein#add('tomasr/molokai')
@@ -117,24 +112,6 @@ au BufNewFile,BufRead *.jbuilder :set filetype=ruby
 au BufNewFile,BufRead *.jb :set filetype=ruby
 au BufNewFile,BufRead *.thor :set filetype=ruby
 au BufNewFile,BufRead *.dig* :set filetype=yaml
-
-"------------------------------------
-" deoplete
-"------------------------------------
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({
-    \ 'auto_complete_delay': 0,
-    \ 'smart_case': v:true,
-    \ })
-" <TAB>: completion.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#manual_complete()
-function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
 
 "------------------------------------
 " NERDTree
