@@ -1,68 +1,40 @@
-" dein.vim install
-" $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-" $ sh ./installer.sh ~/.vim/dein
-" dein Scripts-----------------------------
-if &compatible
-  set nocompatible " Be iMproved
-endif
+" install vim-plug
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-haml'
+Plug 'elixir-editors/vim-elixir'
+Plug 'fatih/vim-go'
+Plug 'hashivim/vim-terraform'
 
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+Plug 'slim-template/vim-slim'
+Plug 'thoughtbot/vim-rspec'
+Plug 'Yggdroot/indentLine'
+Plug 'chase/vim-ansible-yaml'
+Plug 'kchmck/vim-coffee-script'
+Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'zerowidth/vim-copy-as-rtf'
+Plug 'lambdalisue/vim-gista'
+Plug 'editorconfig/editorconfig-vim'
 
-if dein#load_state('~/.vim/dein')
-  call dein#begin('~/.vim/dein')
+Plug 'w0ng/vim-hybrid'
+Plug 'tomasr/molokai'
+Plug 'nanotech/jellybeans.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-scripts/newspaper.vim'
+Plug 'jpo/vim-railscasts-theme'
+call plug#end()
 
-  " Let dein manage dein
-  call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here:
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('itchyny/lightline.vim')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('airblade/vim-gitgutter')
-  call dein#add('vim-ruby/vim-ruby')
-  call dein#add('tpope/vim-endwise')
-  call dein#add('tpope/vim-rails')
-  call dein#add('tpope/vim-haml')
-  call dein#add('elixir-editors/vim-elixir')
-  call dein#add('fatih/vim-go')
-  call dein#add('hashivim/vim-terraform')
-
-  call dein#add('slim-template/vim-slim')
-  call dein#add('thoughtbot/vim-rspec')
-  call dein#add('Yggdroot/indentLine')
-  call dein#add('chase/vim-ansible-yaml')
-  call dein#add('kchmck/vim-coffee-script')
-  call dein#add('elzr/vim-json')
-  call dein#add('pangloss/vim-javascript')
-  call dein#add('mxw/vim-jsx')
-  call dein#add('zerowidth/vim-copy-as-rtf')
-  call dein#add('lambdalisue/vim-gista')
-  call dein#add('editorconfig/editorconfig-vim')
-
-  call dein#add('w0ng/vim-hybrid')
-  call dein#add('tomasr/molokai')
-  call dein#add('nanotech/jellybeans.vim')
-  call dein#add('altercation/vim-colors-solarized')
-  call dein#add('vim-scripts/newspaper.vim')
-  call dein#add('jpo/vim-railscasts-theme')
-
-  " You can specify revision/branch/tag.
-  " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-filetype plugin indent on
 syntax enable
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-
-" colors
-filetype on
 
 colorscheme jellybeans
 
