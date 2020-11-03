@@ -123,10 +123,9 @@ let g:gista#client#default_username = 'yatmsu'
 "------------------------------------
 " vim-terraform
 "------------------------------------
-let g:terraform_align=0
+let g:terraform_align=1
 let g:terraform_fold_sections=0
-let g:terraform_remap_spacebar=0
-let g:terraform_commentstring='#%s'
+let g:terraform_fmt_on_save=1
 
 "------------------------------------
 " vim-indent-guides
