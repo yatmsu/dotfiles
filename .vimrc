@@ -3,31 +3,30 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
+Plug 'Yggdroot/indentLine'
+Plug 'itchyny/lightline.vim'
+Plug 'lambdalisue/vim-gista'
+Plug 'zerowidth/vim-copy-as-rtf'
+Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-haml'
-Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
-
 Plug 'thoughtbot/vim-rspec'
-Plug 'Yggdroot/indentLine'
+
+Plug 'tpope/vim-haml'
+Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'zerowidth/vim-copy-as-rtf'
-Plug 'lambdalisue/vim-gista'
 Plug 'editorconfig/editorconfig-vim'
 
 Plug 'w0ng/vim-hybrid'
 Plug 'tomasr/molokai'
 Plug 'nanotech/jellybeans.vim'
 Plug 'altercation/vim-colors-solarized'
-Plug 'vim-scripts/newspaper.vim'
 Plug 'jpo/vim-railscasts-theme'
 call plug#end()
 
