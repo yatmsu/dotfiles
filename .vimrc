@@ -16,7 +16,6 @@ Plug 'hashivim/vim-terraform'
 
 Plug 'thoughtbot/vim-rspec'
 Plug 'Yggdroot/indentLine'
-Plug 'chase/vim-ansible-yaml'
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
