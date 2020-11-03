@@ -14,7 +14,6 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
 
-Plug 'slim-template/vim-slim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'Yggdroot/indentLine'
 Plug 'chase/vim-ansible-yaml'
