@@ -4,8 +4,9 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
+Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 Plug 'lambdalisue/vim-gista'
