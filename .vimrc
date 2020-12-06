@@ -16,6 +16,7 @@ Plug 'tpope/vim-rails'
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
 Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-markdown'
 
 Plug 'tpope/vim-haml'
 Plug 'elixir-editors/vim-elixir'
