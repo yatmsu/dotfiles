@@ -139,3 +139,8 @@ let g:indentLine_fileTypeExclude = ['help', 'nerdtree']
 " vim-json
 "------------------------------------
 let g:vim_json_syntax_conceal = 0
+
+"------------------------------------
+" tpope/vim-markdown
+"------------------------------------
+let g:markdown_folding = 1
