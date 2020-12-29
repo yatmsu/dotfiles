@@ -16,6 +16,8 @@ Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-markdown'
+" ex) :CocInstall coc-solargraph
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'tpope/vim-haml'
 Plug 'elixir-editors/vim-elixir'
@@ -95,9 +97,10 @@ let g:NERDTreeShowHidden=1 " 隠しファイルを表示する
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
       \ 'active': {
-      \   'left': [ ['mode', 'paste'], ['fugitive', 'readonly', 'filename', 'modified'] ]
+      \   'left': [ ['mode', 'paste'], [ 'cocstatus', 'fugitive', 'readonly', 'filename', 'modified'] ]
       \ },
       \ 'component_function': {
+      \   'cocstatus': 'coc#status',
       \   'fugitive': 'MyFugitive',
       \ }
       \ }
