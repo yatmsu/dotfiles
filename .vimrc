@@ -11,7 +11,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 Plug 'lambdalisue/vim-gista'
 Plug 'zerowidth/vim-copy-as-rtf'
-Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
@@ -109,13 +108,6 @@ function! MyFugitive()
   endif
   return ''
 endfunction
-
-"------------------------------------
-" vim-ruby
-"------------------------------------
-let ruby_operators = 1 " 演算子をハイライト
-let ruby_space_errors = 1 " 行末のホワイトスペースをハイライト
-let g:ruby_indent_access_modifier_style = 'indent'
 
 "------------------------------------
 " vim-gista
