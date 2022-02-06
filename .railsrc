@@ -1,1 +1,1 @@
--d mysql -T --skip-turbolinks --skip-coffee
+-d mysql -T --skip-turbolinks --skip-coffee --skip-jbuilder
