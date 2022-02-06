@@ -15,7 +15,6 @@ Plug 'tpope/vim-rails'
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
 Plug 'thoughtbot/vim-rspec'
-Plug 'tpope/vim-markdown'
 " ex) :CocInstall coc-solargraph
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -134,8 +133,3 @@ let g:indentLine_fileTypeExclude = ['help', 'nerdtree']
 " vim-json
 "------------------------------------
 let g:vim_json_syntax_conceal = 0
-
-"------------------------------------
-" tpope/vim-markdown
-"------------------------------------
-let g:markdown_folding = 1
