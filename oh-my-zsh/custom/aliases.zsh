@@ -14,3 +14,5 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias r="bin/rails"
 alias dc="docker-compose"
+alias restart-bt="blueutil --power 0 && blueutil --power 1"
+
