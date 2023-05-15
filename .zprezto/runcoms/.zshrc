@@ -12,6 +12,7 @@ fi
 
 # aliases
 alias ll='ls -lah'
+alias restart-bt="blueutil --power 0 && blueutil --power 1"
 
 # peco functions
 function peco-history-selection() {
