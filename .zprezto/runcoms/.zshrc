@@ -11,7 +11,16 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # aliases
-alias ll='ls -lah'
+case "${OSTYPE}" in
+freebsd*|darwin*)
+  alias ll="ls -alG"
+  alias ls="ls -G -w"
+  ;;
+linux*)
+  alias ll="ls -al --color"
+  alias ls="ls --color"
+  ;;
+esac
 alias restart-bt="blueutil --power 0 && blueutil --power 1"
 
 # peco functions
