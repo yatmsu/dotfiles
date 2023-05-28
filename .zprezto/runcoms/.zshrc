@@ -42,6 +42,10 @@ setopt hist_ignore_space
 setopt extended_history
 setopt hist_verify
 
+# Directory
+setopt auto_cd
+setopt auto_pushd
+
 # aliases
 case "${OSTYPE}" in
 freebsd*|darwin*)
