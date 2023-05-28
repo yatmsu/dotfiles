@@ -28,6 +28,20 @@ zplug load --verbose
 # Source Prezto.
 [[ -f "$ZPLUG_REPOS/$_ZPLUG_PREZTO"/runcoms/zshrc ]] && source "$ZPLUG_REPOS/$_ZPLUG_PREZTO"/runcoms/zshrc
 
+# History
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=100000
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+setopt hist_reduce_blanks
+setopt hist_no_store
+setopt share_history
+setopt hist_reduce_blanks
+setopt hist_ignore_space
+setopt extended_history
+setopt hist_verify
+
 # aliases
 case "${OSTYPE}" in
 freebsd*|darwin*)
@@ -39,6 +53,8 @@ linux*)
   alias ls="ls --color"
   ;;
 esac
+alias h-all="history -n 0"
+alias h="history 0"
 alias restart-bt="blueutil --power 0 && blueutil --power 1"
 
 # peco functions
