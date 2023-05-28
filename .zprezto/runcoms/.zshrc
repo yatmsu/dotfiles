@@ -66,3 +66,15 @@ function peco-history-selection() {
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
+# peco + ghq
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --prompt "❯" --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  #zle clear-screen
+}
+zle -N peco-src
+bindkey '^g' peco-src
+
