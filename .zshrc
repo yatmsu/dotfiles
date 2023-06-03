@@ -1,10 +1,3 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting"
