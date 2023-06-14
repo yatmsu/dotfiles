@@ -6,6 +6,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "Meroje/zsh-rbenv"
 zplug "sorin-ionescu/prezto"
+zplug "ptavares/zsh-direnv"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
