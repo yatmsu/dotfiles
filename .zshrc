@@ -22,6 +22,9 @@ zplug load --verbose
 # Source Prezto.
 [[ -f "$ZPLUG_REPOS/$_ZPLUG_PREZTO"/runcoms/zshrc ]] && source "$ZPLUG_REPOS/$_ZPLUG_PREZTO"/runcoms/zshrc
 
+# Source .zshrc.mine
+[[ -f ~/.zshrc.mine ]] && source ~/.zshrc.mine
+
 # Key Bind
 bindkey -v
 
