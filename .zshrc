@@ -60,6 +60,7 @@ esac
 alias h-all="history -n 0"
 alias h="history 0"
 alias restart-bt="blueutil --power 0 && blueutil --power 1"
+alias dkc="docker compose"
 
 # peco functions
 function peco-history-selection() {
