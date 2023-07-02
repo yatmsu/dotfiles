@@ -9,3 +9,6 @@ Icon
 ### Docker files ###
 docker-compose.override.yml
 
+### Ruby files ###
+.byebug_history
+
