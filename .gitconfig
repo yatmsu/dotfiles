@@ -17,6 +17,7 @@
   g = grep
   pfwl = push --force-with-lease
   brm = branch -m
+  ignored-files = git status --ignored -s
 [pull]
   rebase = true
 [fetch]
