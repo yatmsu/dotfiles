@@ -7,6 +7,7 @@ zplug "zsh-users/zsh-completions"
 zplug "Meroje/zsh-rbenv"
 zplug "sorin-ionescu/prezto"
 zplug "ptavares/zsh-direnv"
+zplug "docker/cli", use:"contrib/completion/zsh"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
