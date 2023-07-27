@@ -8,6 +8,7 @@ zplug "Meroje/zsh-rbenv"
 zplug "sorin-ionescu/prezto"
 zplug "ptavares/zsh-direnv"
 zplug "docker/cli", use:"contrib/completion/zsh"
+zplug "docker/compose", use:"contrib/completion/zsh"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -61,7 +62,8 @@ esac
 alias h-all="history -n 0"
 alias h="history 0"
 alias restart-bt="blueutil --power 0 && blueutil --power 1"
-alias dkc="docker compose"
+alias dkc="docker-compose"
+compdef dkc="docker-compose"
 
 # peco functions
 function peco-history-selection() {
