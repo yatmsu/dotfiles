@@ -9,7 +9,7 @@ zplug "Meroje/zsh-rbenv"
 zplug "sorin-ionescu/prezto"
 zplug "ptavares/zsh-direnv"
 zplug "docker/cli", use:"contrib/completion/zsh"
-zplug "docker/compose", use:"contrib/completion/zsh"
+zplug "greymd/docker-zsh-completion"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
