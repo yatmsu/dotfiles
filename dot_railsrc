@@ -1,1 +1,1 @@
--d mysql -T --skip-turbolinks --skip-coffee --skip-jbuilder
+-d mysql --skip-action-mailbox --skip-action-text --skip-active-storage --skip-action-cable --skip-jbuilder --skip-test --skip-system-test --devcontainer -j esbuild -c tailwind -a propshaft
