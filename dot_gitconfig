@@ -18,6 +18,7 @@
   pfwl = push --force-with-lease
   brm = branch -m
   ignored-files = git status --ignored -s
+  rh = reset --hard
 [pull]
   rebase = true
 [fetch]
