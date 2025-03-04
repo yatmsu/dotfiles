@@ -86,5 +86,5 @@ function peco-src () {
   #zle clear-screen
 }
 zle -N peco-src
-bindkey '^g' peco-src
+bindkey '^f' peco-src
 
