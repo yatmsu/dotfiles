@@ -25,3 +25,6 @@
   prune = true
 [ghq]
   root = ~/.ghq
+[init]
+  defaultBranch = main
+
